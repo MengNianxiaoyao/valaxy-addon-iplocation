@@ -192,18 +192,17 @@ const formatTraceInfo = (trace: any): TraceInfo => {
   const infoArray: TraceItem[] = []
   
   if (data === 'ip-taobao') {
-    if (traceData.country) infoArray.push({ label: '国家/地区', value: traceData.country })
-    if (traceData.region) infoArray.push({ label: '省份', value: traceData.region })
-    if (traceData.city) infoArray.push({ label: '城市', value: traceData.city })
-    if (traceData.isp) infoArray.push({ label: 'ISP', value: traceData.isp })
-    if (traceData.org) infoArray.push({ label: '组织', value: traceData.org })
+    infoArray.push({ label: '国家/地区', value: traceData.country })
+    infoArray.push({ label: '省份', value: traceData.region })
+    infoArray.push({ label: '城市', value: traceData.city })
+    infoArray.push({ label: 'ISP', value: traceData.isp })
   } else {
-    if (traceData.country) infoArray.push({ label: '国家/地区', value: traceData.country })
-    if (traceData.regionName) infoArray.push({ label: '省份', value: traceData.regionName })
-    if (traceData.city) infoArray.push({ label: '城市', value: traceData.city })
-    if (traceData.lat && traceData.lon) infoArray.push({ label: '经纬度', value: `${traceData.lat.toFixed(4)}, ${traceData.lon.toFixed(4)}` })
-    if (traceData.isp) infoArray.push({ label: 'ISP', value: traceData.isp })
-    if (traceData.org) infoArray.push({ label: '组织', value: traceData.org })
+    infoArray.push({ label: '国家/地区', value: traceData.country })
+    infoArray.push({ label: '省份', value: traceData.regionName })
+    infoArray.push({ label: '城市', value: traceData.city })
+    infoArray.push({ label: '经纬度', value: `${traceData.lat.toFixed(4)}, ${traceData.lon.toFixed(4)}` })
+    infoArray.push({ label: 'ISP', value: traceData.isp })
+    infoArray.push({ label: '组织', value: traceData.org })
   }
   
   return infoArray.length > 0 ? infoArray : '无地理信息'
