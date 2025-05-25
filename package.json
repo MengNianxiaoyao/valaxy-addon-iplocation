@@ -1,0 +1,14 @@
+{
+  "name": "valaxy-addon-iplocation",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "IP location addon for Valaxy",
+  "repository": "https://github.com/MengNianxiaoyao/valaxy-addon-iplocation",
+  "keywords": [
+    "valaxy",
+    "addon",
+    "ip"
+  ],
+  "main": "index.ts",
+  "types": "index.d.ts"
+}
