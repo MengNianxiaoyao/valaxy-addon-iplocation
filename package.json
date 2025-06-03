@@ -10,5 +10,9 @@
     "ip"
   ],
   "main": "index.ts",
-  "types": "index.d.ts"
+  "types": "index.d.ts",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
 }
